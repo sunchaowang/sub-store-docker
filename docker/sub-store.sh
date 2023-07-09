@@ -13,7 +13,6 @@ echo -e "======================== 1、更 新 仓 库 ========================\n
     sleep 2s
     cd "$rootPath/Docker" && git reset --hard && git pull
     sleep 2s
-    # ln -sf "$gitPath/Docker/docker/sub-update.sh" /usr/bin/sub_update && chmod +x /usr/bin/sub_update
 
 echo -e "==============================================================\n"
 
