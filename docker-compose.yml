@@ -1,0 +1,17 @@
+version: '2.2'
+services:
+  substore:
+    image: sub_store
+    container_name: Substore
+   #network_mode: docker-net
+    restart: always
+    shm_size: 2gb
+    ports:
+      - "6080:6080"
+    volumes:
+      - $PWD/Back:/Sub-Store/backend
+      - $PWD/Front:/Sub-Store/Front
+    environment:
+      - DOMAIN=https://sub-store.inchatapp.com #sub-store 访问域名
+      # - ALLOW_IP=127.0.0.1 #sub-store #访问限制IP 若注释，则不限制访问
+      - TZ=Asia/Shanghai
