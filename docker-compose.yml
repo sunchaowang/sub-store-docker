@@ -9,7 +9,7 @@ services:
     ports:
       - "6080:6080"
     volumes:
-      - $PWD/Back:/Sub-Store/backend
+      - $PWD/Back:/Sub-Store/Back
       - $PWD/Front:/Sub-Store/Front
     environment:
       - DOMAIN=https://sub-store.inchatapp.com #sub-store 访问域名
