@@ -15,14 +15,16 @@ RUN mkdir /Sub-Store \
 ENV FRONT_END="https://github.com/sunchaowang/sub-store-frontend.git"
 ENV BACK_END="https://github.com/sunchaowang/sub-store-backend.git"
 ENV DOKCER="https://github.com/sunchaowang/sub-store-docker.git"
+
 ENV DOMIAN="/"
 ENV TZ=Asia/Shanghai
 
 WORKDIR /Sub-Store
 RUN cd /Sub-Store \
     && git clone ${FRONT_END} Front \
-    && git clone ${BACK_END} Back \
-    && git clone ${DOKCER} Docker
+    && git clone ${BACK_END} Back
+
+COPY ./ /Sub-Store/Docker
 
 RUN mkdir -p /etc/nginx/conf.d \
     && cp -r /Sub-Store/Docker/nginx/front* /etc/nginx/conf.d/ \

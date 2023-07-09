@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   substore:
-    image: substore01
+    image: substore
     container_name: Substore
    #network_mode: docker-net
     restart: always
