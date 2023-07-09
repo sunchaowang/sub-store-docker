@@ -1,7 +1,7 @@
 #!/bin/sh
 
 gitPath="/"
-rootPath="/root/Sub-Store"
+rootPath="/Sub-Store"
 backend="$rootPath/Back"
 web="$rootPath/Front"
 
